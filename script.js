@@ -8,9 +8,10 @@ document.querySelector(".again-btn").style.display = "none";
 document.querySelector(".guess-btn").addEventListener("click", function () {
   const guessNumber = Number(document.querySelector(".guess-number").value);
 
-  if (guessNumber === 10) {
+  if (guessNumber === secretNumber) {
     document.querySelector(".message").textContent =
       "Well done ! that is corrct";
+    document.querySelector("body").style.backgroundColor = "green";
     hideButtonfuncion();
 
     // high scor validation
